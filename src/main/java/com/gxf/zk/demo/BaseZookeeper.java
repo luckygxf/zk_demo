@@ -50,6 +50,7 @@ public class BaseZookeeper implements Watcher
             System.out.println("watcher received event");
             countDownLatch.countDown();
         }
+        System.out.println("received event " + event.getType());
     }
 
     /**

@@ -1,6 +1,5 @@
 package com.gxf.zk.demo;
 
-import org.apache.zookeeper.KeeperException;
 
 /**
  * @Author: <guanxianseng@163.com>
@@ -13,7 +12,10 @@ public class ZkTest {
         BaseZookeeper baseZookeeper = new BaseZookeeper();
         try {
             baseZookeeper.connectZookeeper("127.0.0.1");
-            baseZookeeper.createNode("/name", "guanxiangfei".getBytes());
+//            baseZookeeper.createNode("/name", "guanxiangfei".getBytes());
+            while(true){
+                Thread.sleep(1000);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
